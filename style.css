@@ -18,6 +18,7 @@ html {
 
 header{
     position: fixed;
+    z-index: 1;
     background-color: #fff;
     height: 88px;
     width: 100%;
@@ -56,12 +57,17 @@ main{
 
 .container{
     max-width: 1440px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin: 0 auto;
+}
+
+.conteiner_slider{
+    overflow: hidden;
 }
 
 .header__content{
     height: 80px;
-    width: 98%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -103,13 +109,13 @@ main{
 
 .main__hobby-content{
     display: flex;
-    position: relative;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
     cursor: grab;
+    gap: 30px;
     width: 100%;
-    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
 }
 
 .main__hobby-content-card{
@@ -118,7 +124,7 @@ main{
     background-position: center;
     background-size: cover;
     padding: 1.5rem;
-    width: 1400px;
+    width: 100%;
     aspect-ratio: 1 / 1;
     border-radius: 20px;
     flex-direction: column;
